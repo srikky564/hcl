@@ -1,0 +1,116 @@
+.container {
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 40px;
+}
+
+tbody {
+    box-shadow: 0px 1px 5px #eaedef
+}
+
+.searchField {
+    width: 25%
+}
+
+img {
+    cursor: pointer;
+}
+
+th img {
+    margin-left: 10px;
+}
+
+th, td {
+    text-align: start;
+    width: 20%;
+    padding: 20px;
+    white-space: pre;
+    font-family: AzoSans-Regular;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+tr {
+    border: solid 1px #dfe3ea;
+    cursor: pointer;
+}
+
+.heading {
+    border-top: solid 1px #dfe3ea;
+}
+
+th {
+    background-color: #eaedef;
+    color: #848585;
+}
+
+td {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+td span {
+    width: 0px;
+    margin-left: 25%;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    font-family: AzoSans-Bold;
+    font-size: 14px;
+    color: white;
+    justify-content: center;
+}
+
+.pagination {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    font-family: AzoSans-Regular;
+    /* font-size: 12px; sprint theme */
+    font-size: 14px;
+    padding: 5px;
+    width: 15px;
+    height: 15px;
+    margin: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination a.active {
+    background-color: #000;
+    color: white;
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+    color: #FFF;
+    width: 20px;
+    height: 20px;
+    transform: rotate(-315deg);
+    border-radius: 4.7px;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.active div {
+    transform: rotate(315deg);
+}

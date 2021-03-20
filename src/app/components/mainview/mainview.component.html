@@ -1,0 +1,39 @@
+<div class="container">
+
+
+    <input type="text" (keyup)="applyFilter($event.target.value)" [placeholder]="'EnterSearchField'" />
+
+    <div *ngIf="pagedItems.length > 0">
+        <table>
+            <tr class="heading">
+
+                <th>Title</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Status</th>
+                <th>DueDate</th>
+                <th>Moredetails</th>
+            </tr>
+            <tr *ngFor="let book of pagedItems">
+                <td>{{book.name}}</td>
+                <td>{{book.authorName}}</td>
+                <td>{{book.category}}</td>
+                <td>{{book.status}}</td>
+                <td>{{book.dueDate}}</td>
+                <td><a>Moredetails</a></td>
+
+            </tr>
+        </table>
+        <div class="pagination" *ngIf="pager.pages && pager.pages.length">
+            <a [ngClass]="{disabled:pager.currentPage === 1}" (click)="setPage(pager.currentPage - 1)">left</a>
+            <span *ngFor="let page of pager.pages">
+                <a [ngClass]="{active:pager.currentPage === page}" (click)="setPage(page)">
+                    <div>{{page}}</div>
+                </a>
+            </span>
+            <a [ngClass]="{disabled:pager.currentPage === pager.totalPages}"
+                (click)="setPage(pager.currentPage + 1)">right</a>
+        </div>
+    </div>
+    <div *ngIf="pagedItems.length <= 0">No data Found</div>
+</div>
